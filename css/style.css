@@ -1,0 +1,194 @@
+body {
+    font-family: "Arial Nova", Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f9f9f9
+}
+
+.title-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100%
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 60px
+}
+
+input[type=button] {
+    width: 150px;
+    height: 150px;
+    font-size: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: transform .2s
+}
+
+input[type=button]:hover:not(:disabled) {
+    transform: scale(1.03)
+}
+
+.button-x,
+.button-o {
+    cursor: pointer
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    position: relative;
+    margin: 20px 0
+}
+
+td {
+    position: relative;
+    transition: background-color .3s
+}
+
+td:not(:last-child) {
+    border-right: 2px solid #333
+}
+
+tr:not(:last-child) td {
+    border-bottom: 2px solid #333
+}
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px
+}
+
+.timer {
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #f2f2f2;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+h1#Turno {
+    margin: 0;
+    font-size: 24px;
+    background-color: #f2f2f2;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1)
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+    transition: all .2s
+}
+
+button:hover {
+    background-color: #e0e0e0;
+    transform: translateY(-2px)
+}
+
+#reiniciar {
+    background-color: #4CAF50;
+    color: #fff
+}
+
+#reiniciar:hover {
+    background-color: #45a049
+}
+
+#changeImages {
+    background-color: #2196F3;
+    color: #fff
+}
+
+#changeImages:hover {
+    background-color: #0b7dda
+}
+
+#cambiarColorCeldas {
+    background-color: #ff9800;
+    color: #fff
+}
+
+#cambiarColorCeldas:hover {
+    background-color: #e68a00
+}
+
+#cambiarColorLinea {
+    background-color: #9c27b0;
+    color: #fff;
+    border-bottom: 5px solid #4d4d4d
+}
+
+#cambiarColorLinea:hover {
+    background-color: #8e24aa
+}
+
+tr::after,
+td::after {
+    content: "";
+    position: absolute;
+    background-color: #4d4d4d;
+    z-index: 10 !important;
+    pointer-events: none
+}
+
+@keyframes timerWarning {
+
+    0%,
+    100% {
+        color: #000
+    }
+
+    50% {
+        color: red
+    }
+}
+
+.timer.warning {
+    animation: timerWarning 1s infinite
+}

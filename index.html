@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/functions.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>tic tac toe</h1>
+        <div class="timer-container">
+            <div id="temporizador" class="timer">3:00</div>
+        </div>
+        <table>
+            <tr>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+                <td><input type="button" value="" onclick="turno(this)"></td>
+            </tr>
+        </table>
+        <div class="bottom-container">
+            <h1 id="Turno">Turno: X</h1>
+            <div class="buttons-container">
+                <button id="reiniciar" onclick="reiniciar()">Reiniciar</button>
+                <button id="changeImages" onclick="changeImageSet()">Cambiar Imágenes</button>
+                <button id="cambiarColorCeldas" onclick="cambiarColorCeldas()">Cambiar Color Celdas</button>
+                <button id="cambiarColorLinea" onclick="cambiarColorLinea()">Cambiar Color Línea Ganadora</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
